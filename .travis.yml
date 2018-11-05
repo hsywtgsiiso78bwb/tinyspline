@@ -1,0 +1,38 @@
+branches:
+  except:
+    - appveyor
+    - circleci
+    - gh-pages
+    - build_linux_64
+    - build_osx_64
+
+# Travis CI tests only Clang. GCC is tested elsewhere.
+language: cpp
+compiler: clang
+
+os:
+  - linux
+  - osx
+
+# Ubuntu 16.04
+dist: xenial
+sudo: true
+
+osx_image: xcode9.2
+
+install:
+  - pushd tools/ci
+  - ./install_deps.sh
+  - popd
+
+before_script:
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - export BUILD_DIR="build"
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then export DEPLOY_DOCS="true" CMAKE_FLAGS="$CMAKE_FLAGS -DTINYSPLINE_DISABLE_PHP=TRUE"; fi;
+  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then export CMAKE_FLAGS="$CMAKE_FLAGS -DTINYSPLINE_DISABLE_PHP=TRUE -DTINYSPLINE_DISABLE_RUBY=TRUE"; fi;
+
+script:
+  - pushd tools/ci
+  - ./compile.sh
+  - ./deploy_docs.sh
+  - popd

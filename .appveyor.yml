@@ -1,0 +1,18 @@
+branches:
+  except:
+    - circleci
+    - travisci
+    - gh-pages
+    - build_linux_64
+    - build_osx_64
+
+install:
+  - ps: choco install -y -r swig --version 3.0.9
+  - ps: choco install -y -r ruby
+  - ps: refreshenv
+
+before_build:
+  - cmake -G "Visual Studio 14 2015 Win64" -DTINYSPLINE_DISABLE_PYTHON=TRUE .
+
+build:
+  project: tinyspline.sln
