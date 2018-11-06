@@ -156,7 +156,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake -DTINYSPLINE_DISABLE_CSHARP=YES ..</div></div><!-- fragment --><h4>Install the C and C++ Libraries</h4>
 <p>The following command installs TinySpline to your system:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake --build . --target install</div></div><!-- fragment --><p>However, there are several binding-related files that CMake does not install with this command, as some languages use custom tools to install files. Python, for instance, uses Distutils/Setuptools to install files to Python-specific directories that CMake is not aware of. Thus, TinySpline ships further, language-related distribution tools.</p>
-<h3>3 Install the Bindings</h3>
+<h4>Install the Bindings</h4>
 <p>Depending on your configuration, binding-related distribution files are generated within the root of your build directory. That is, for instance, the file <code>setup.py</code> is generated if support for Python was detected. Currently, the following build tools are supported: Setuptools (Python), Maven (Java), and Luarocks (Lua).</p>
 <h3>Theoretical Backgrounds</h3>
 <p><a href="http://www.cs.mtu.edu/~shene/COURSES/cs3621/NOTES/spline/B-spline/bspline-curve.html">[1]</a> is a very good starting point for B-Splines.</p>
@@ -168,7 +168,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Tue Nov 6 2018 11:40:22 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 6 2018 11:45:15 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
