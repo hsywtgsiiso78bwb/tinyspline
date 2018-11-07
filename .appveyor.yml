@@ -6,13 +6,18 @@ branches:
     - build_linux_64
     - build_osx_64
 
+environment:
+  matrix:
+    - CMAKE_GENERATOR: "Visual Studio 15 2017 Win64"
+    - CMAKE_GENERATOR: "MinGW Makefiles"
+
 install:
   - ps: choco install -y -r swig --version 3.0.9
   - ps: choco install -y -r lua
   - ps: refreshenv
 
 before_build:
-  - cmake -G "Visual Studio 15 2017 Win64" -DTINYSPLINE_DISABLE_PYTHON=TRUE .
+  - cmake -G "%CMAKE_GENERATOR%" -DTINYSPLINE_DISABLE_PYTHON=TRUE .
 
 build:
   project: tinyspline.sln
