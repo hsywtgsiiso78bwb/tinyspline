@@ -7,6 +7,8 @@ var searchData=
   ['ts_5fbspline_5fdegree',['ts_bspline_degree',['../tinyspline_8h.html#abaa2f455904401b6d848296e4954ace5',1,'tinyspline.c']]],
   ['ts_5fbspline_5fderive',['ts_bspline_derive',['../tinyspline_8h.html#aa79e2c38510f00734b885b13c7d7e6e6',1,'tinyspline.c']]],
   ['ts_5fbspline_5fdimension',['ts_bspline_dimension',['../tinyspline_8h.html#a018385ed866e0a8b840ebc8dc9857829',1,'tinyspline.c']]],
+  ['ts_5fbspline_5fdomain_5fmax',['ts_bspline_domain_max',['../tinyspline_8h.html#a6a664fb825edaa4c79767c96368d49e5',1,'tinyspline.c']]],
+  ['ts_5fbspline_5fdomain_5fmin',['ts_bspline_domain_min',['../tinyspline_8h.html#a3916ff87c8f377d14484f7f1671fcec0',1,'tinyspline.c']]],
   ['ts_5fbspline_5feval',['ts_bspline_eval',['../tinyspline_8h.html#a76b9dd8396fd83bf0aef88ac36b606f5',1,'tinyspline.c']]],
   ['ts_5fbspline_5ffill_5fknots',['ts_bspline_fill_knots',['../tinyspline_8h.html#a6199d07c43a843c4283d6c631ece80d7',1,'tinyspline.c']]],
   ['ts_5fbspline_5ffree',['ts_bspline_free',['../tinyspline_8h.html#a1ae22ecf7c8865fc2eddeecfaa78c237',1,'tinyspline.c']]],
