@@ -161,7 +161,9 @@ Enumerations</h2></td></tr>
 &#160;&#160;<b>TS_UNDERIVABLE</b> = -8, 
 <b>TS_LCTRLP_DIM_MISMATCH</b> = -10, 
 <b>TS_IO_ERROR</b> = -11, 
-<b>TS_PARSE_ERROR</b> = -12
+<b>TS_PARSE_ERROR</b> = -12, 
+<br />
+&#160;&#160;<b>TS_INDEX_ERROR</b> = -13
 <br />
  }</td></tr>
 <tr class="separator:a565ff3761d90530714283629d1850e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,6 +196,8 @@ Functions</h2></td></tr>
 <tr class="separator:a02f1dcb04924323277ac7f16791ac3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a733a0cde3a8ff0f939057f75ce5d3aae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a733a0cde3a8ff0f939057f75ce5d3aae">ts_bspline_control_points</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal **ctrlp)</td></tr>
 <tr class="separator:a733a0cde3a8ff0f939057f75ce5d3aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07729ae3f9953161cbcb614c5aabe5ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a07729ae3f9953161cbcb614c5aabe5ac">ts_bspline_control_point_at</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t index, tsReal **ctrlp)</td></tr>
+<tr class="separator:a07729ae3f9953161cbcb614c5aabe5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63485fd35fa4da126e01d39ee2ccd5d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a63485fd35fa4da126e01d39ee2ccd5d9">ts_bspline_set_control_points</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, const tsReal *ctrlp)</td></tr>
 <tr class="separator:a63485fd35fa4da126e01d39ee2ccd5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a951dfbdaecf6d57dee0664742271a846"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a951dfbdaecf6d57dee0664742271a846">ts_bspline_num_knots</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
@@ -394,6 +398,50 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
 <dd>
 TS_MALLOC If allocating memory failed. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a07729ae3f9953161cbcb614c5aabe5ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_control_point_at </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
+          <td class="paramname"><em>spline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tsReal **&#160;</td>
+          <td class="paramname"><em>ctrlp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a deep copy of the control point of <code>spline</code> at <code>index</code> (index 0 is the first control points, index 1 is the second control point, and so on).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spline</td><td>The spline whose control point is read. </td></tr>
+    <tr><td class="paramname">index</td><td>The zero based index of the requested control point. </td></tr>
+    <tr><td class="paramname">ctrlp</td><td>The output array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
+<dd>
+TS_INDEX_ERROR If there is no control point at <code>index</code>. </dd></dl>
 
 </div>
 </div>
@@ -2202,7 +2250,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Sun Dec 9 2018 13:55:52 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 9 2018 21:05:55 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.

@@ -2,6 +2,7 @@ var searchData=
 [
   ['ts_5farr_5ffill',['ts_arr_fill',['../tinyspline_8h.html#a997ea4b1b2b78d2e0c4d93d84adbc9dc',1,'tinyspline.c']]],
   ['ts_5fbspline_5fbuckle',['ts_bspline_buckle',['../tinyspline_8h.html#a81669bc634b4d870496f835ba530545f',1,'tinyspline.c']]],
+  ['ts_5fbspline_5fcontrol_5fpoint_5fat',['ts_bspline_control_point_at',['../tinyspline_8h.html#a07729ae3f9953161cbcb614c5aabe5ac',1,'tinyspline.c']]],
   ['ts_5fbspline_5fcontrol_5fpoints',['ts_bspline_control_points',['../tinyspline_8h.html#a733a0cde3a8ff0f939057f75ce5d3aae',1,'tinyspline.c']]],
   ['ts_5fbspline_5fcopy',['ts_bspline_copy',['../tinyspline_8h.html#a4c1d28e8f52a4f05e19a5ca2cfd404fc',1,'tinyspline.c']]],
   ['ts_5fbspline_5fdegree',['ts_bspline_degree',['../tinyspline_8h.html#abaa2f455904401b6d848296e4954ace5',1,'tinyspline.c']]],
