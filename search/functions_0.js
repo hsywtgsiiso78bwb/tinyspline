@@ -16,7 +16,7 @@ var searchData=
   ['ts_5fbspline_5ffrom_5fjson',['ts_bspline_from_json',['../tinyspline_8h.html#a5c8c20a177bfc0afbda209f6ab51f92b',1,'tinyspline.c']]],
   ['ts_5fbspline_5finsert_5fknot',['ts_bspline_insert_knot',['../tinyspline_8h.html#a4c1c871b8fed7f04e630fd18691970f4',1,'tinyspline.c']]],
   ['ts_5fbspline_5finterpolate_5fcubic',['ts_bspline_interpolate_cubic',['../tinyspline_8h.html#a95bd68ed4b4effcb893e50a79ea1a9f4',1,'tinyspline.c']]],
-  ['ts_5fbspline_5fis_5fclosed',['ts_bspline_is_closed',['../tinyspline_8h.html#a01a094bf1f84f9bcb8082197c0b90ba7',1,'tinyspline.c']]],
+  ['ts_5fbspline_5fis_5fclosed',['ts_bspline_is_closed',['../tinyspline_8h.html#ad744c0b96644ac12ad983791e34f74ed',1,'tinyspline.c']]],
   ['ts_5fbspline_5fknots',['ts_bspline_knots',['../tinyspline_8h.html#a48508d75b81d64a632cb52143d468cc1',1,'tinyspline.c']]],
   ['ts_5fbspline_5flen_5fcontrol_5fpoints',['ts_bspline_len_control_points',['../tinyspline_8h.html#ad911018c9a8e822a3e0ee1a87d2160cc',1,'tinyspline.c']]],
   ['ts_5fbspline_5fload_5fjson',['ts_bspline_load_json',['../tinyspline_8h.html#a0df50da2946f3d0f35e5eb29d4a982dd',1,'tinyspline.c']]],

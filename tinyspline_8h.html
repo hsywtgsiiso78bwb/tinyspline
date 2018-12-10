@@ -256,8 +256,8 @@ Functions</h2></td></tr>
 <tr class="separator:a3916ff87c8f377d14484f7f1671fcec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a664fb825edaa4c79767c96368d49e5"><td class="memItemLeft" align="right" valign="top">tsReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a6a664fb825edaa4c79767c96368d49e5">ts_bspline_domain_max</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
 <tr class="separator:a6a664fb825edaa4c79767c96368d49e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01a094bf1f84f9bcb8082197c0b90ba7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a01a094bf1f84f9bcb8082197c0b90ba7">ts_bspline_is_closed</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal epsilon)</td></tr>
-<tr class="separator:a01a094bf1f84f9bcb8082197c0b90ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad744c0b96644ac12ad983791e34f74ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ad744c0b96644ac12ad983791e34f74ed">ts_bspline_is_closed</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal epsilon, int *closed)</td></tr>
+<tr class="separator:ad744c0b96644ac12ad983791e34f74ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa79e2c38510f00734b885b13c7d7e6e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aa79e2c38510f00734b885b13c7d7e6e6">ts_bspline_derive</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t n, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_derivative_)</td></tr>
 <tr class="separator:aa79e2c38510f00734b885b13c7d7e6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6199d07c43a843c4283d6c631ece80d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a6199d07c43a843c4283d6c631ece80d7">ts_bspline_fill_knots</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, <a class="el" href="tinyspline_8h.html#aab5b8110f44d56c12ee1bbf0c76a29a4">tsBSplineType</a> type, tsReal min, tsReal max, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_result_)</td></tr>
@@ -971,12 +971,12 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a01a094bf1f84f9bcb8082197c0b90ba7"></a>
+<a class="anchor" id="ad744c0b96644ac12ad983791e34f74ed"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ts_bspline_is_closed </td>
+          <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_is_closed </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
           <td class="paramname"><em>spline</em>, </td>
@@ -985,7 +985,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">tsReal&#160;</td>
-          <td class="paramname"><em>epsilon</em>&#160;</td>
+          <td class="paramname"><em>epsilon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>closed</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -994,17 +1000,18 @@ TS_MALLOC If allocating memory failed. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns whether the distance of the first and last control point of <code>spline</code> is less than or equal to <code>epsilon</code>. The distance of possible inner gaps is not considered.</p>
+<p>Returns whether the distance of the first and the last point (not necessarily the control points) of <code>spline</code> is less than or equal to <code>epsilon</code>. The distance of possible inner gaps is not considered.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline to query. </td></tr>
     <tr><td class="paramname">epsilon</td><td>The maximum distance. </td></tr>
+    <tr><td class="paramname">closed</td><td>The output parameter. Is set to 1 if the distance of the first and the last point (not necessarily the control points) of <code>spline</code> is less than or equal to <code>epsilon</code>. Is set to 0 otherwise. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>1 If the distance of the first and last control point of <code>spline</code> is less than or equal to <code>epsilon</code>. </dd>
+<dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
 <dd>
-0 Otherwise. </dd></dl>
+TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
@@ -2289,7 +2296,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Sun Dec 9 2018 21:39:26 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 10 2018 10:05:53 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
