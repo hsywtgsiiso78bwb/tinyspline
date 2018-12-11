@@ -27,6 +27,7 @@ var searchData=
   ['ts_5fbspline_5forder',['ts_bspline_order',['../tinyspline_8h.html#ae94b75586c66cfadc612da2436bff00c',1,'tinyspline.c']]],
   ['ts_5fbspline_5fresize',['ts_bspline_resize',['../tinyspline_8h.html#a975fbf5f686b7d4e44a34eb06d9ffe15',1,'tinyspline.c']]],
   ['ts_5fbspline_5fsave_5fjson',['ts_bspline_save_json',['../tinyspline_8h.html#a3509c0e1085738f158bac364bbe5b4fa',1,'tinyspline.c']]],
+  ['ts_5fbspline_5fset_5fcontrol_5fpoint_5fat',['ts_bspline_set_control_point_at',['../tinyspline_8h.html#ac5eafb1327bc9f1306ded38e3da56a98',1,'tinyspline.c']]],
   ['ts_5fbspline_5fset_5fcontrol_5fpoints',['ts_bspline_set_control_points',['../tinyspline_8h.html#a63485fd35fa4da126e01d39ee2ccd5d9',1,'tinyspline.c']]],
   ['ts_5fbspline_5fset_5fdegree',['ts_bspline_set_degree',['../tinyspline_8h.html#a980c07744f3b8dce1952f515b95ea468',1,'tinyspline.c']]],
   ['ts_5fbspline_5fset_5fdimension',['ts_bspline_set_dimension',['../tinyspline_8h.html#a83791fb7f460386a91d323fd6b1ba3d4',1,'tinyspline.c']]],
