@@ -236,6 +236,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab2bea39fc67549b06e27df5e86849511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cee7e95a93308e5452dbde41b737c04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a0cee7e95a93308e5452dbde41b737c04">ts_deboornet_result</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net, tsReal **result)</td></tr>
 <tr class="separator:a0cee7e95a93308e5452dbde41b737c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c964681bfa38c6f2cd923c9e288891"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structts_b_spline.html">tsBSpline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ae8c964681bfa38c6f2cd923c9e288891">ts_bspline_init</a> ()</td></tr>
+<tr class="separator:ae8c964681bfa38c6f2cd923c9e288891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc3ccefc135630e07541d7bd6a2553f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a4fc3ccefc135630e07541d7bd6a2553f">ts_bspline_new</a> (size_t num_control_points, size_t dimension, size_t degree, <a class="el" href="tinyspline_8h.html#aab5b8110f44d56c12ee1bbf0c76a29a4">tsBSplineType</a> type, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_)</td></tr>
 <tr class="separator:a4fc3ccefc135630e07541d7bd6a2553f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c1d28e8f52a4f05e19a5ca2cfd404fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a4c1d28e8f52a4f05e19a5ca2cfd404fc">ts_bspline_copy</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *original, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_copy_)</td></tr>
@@ -244,6 +246,8 @@ Functions</h2></td></tr>
 <tr class="separator:add802363d781d08f56f41c1482a0bccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ae22ecf7c8865fc2eddeecfaa78c237"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a1ae22ecf7c8865fc2eddeecfaa78c237">ts_bspline_free</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_)</td></tr>
 <tr class="separator:a1ae22ecf7c8865fc2eddeecfaa78c237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad43f76a5a27d1a1e7a6c155a1814de3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ad43f76a5a27d1a1e7a6c155a1814de3a">ts_deboornet_init</a> ()</td></tr>
+<tr class="separator:ad43f76a5a27d1a1e7a6c155a1814de3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af92380de0c8654d714e524cbdcb24ac4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#af92380de0c8654d714e524cbdcb24ac4">ts_deboornet_copy</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *original, <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *_copy_)</td></tr>
 <tr class="separator:af92380de0c8654d714e524cbdcb24ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a020c7a42e7e1baba7e696e8940e1f089"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a020c7a42e7e1baba7e696e8940e1f089">ts_deboornet_move</a> (<a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *from, <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *_to_)</td></tr>
@@ -796,7 +800,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Frees the dynamically allocated memory of <code>_spline_</code>. After calling this function, <code>_spline_</code> points to NULL.</p>
+<p>Frees the data of <code>_spline_</code>. After calling this function, the data of <code>_spline_</code> points to NULL.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_spline_</td><td>The spline to free. </td></tr>
@@ -854,6 +858,23 @@ TS_KNOTS_DECR If the knot vector is decreasing. </dd>
 TS_MULTIPLICITY If there is a knot with multiplicity greater than order. </dd>
 <dd>
 TS_MALLOC If allocating memory failed. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae8c964681bfa38c6f2cd923c9e288891"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structts_b_spline.html">tsBSpline</a> ts_bspline_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a new spline whose data points to NULL.</p>
+<dl class="section return"><dt>Returns</dt><dd>A new spline whose data points to NULL. </dd></dl>
 
 </div>
 </div>
@@ -1156,7 +1177,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Moves the ownership of the data of <code>from</code> to <code>_to_</code>. After calling this function, <code>from</code> points to NULL. Does nothing, if <code>from</code> == <code>_to_</code>.</p>
+<p>Moves the ownership of the data of <code>from</code> to <code>_to_</code>. After calling this function, the data of <code>from</code> points to NULL. Does not free the data of <code>_to_</code>. Does nothing, if <code>from</code> == <code>_to_</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">from</td><td>The spline whose values are moved to <code>_to_</code>. </td></tr>
@@ -1910,7 +1931,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Frees the dynamically allocated memory of <code>_net_</code>. After calling this function, <code>_net_</code> points to NULL.</p>
+<p>Frees the data of <code>_net_</code>. After calling this function, the data of <code>_net_</code> points to NULL.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_net_</td><td>The net to free. </td></tr>
@@ -1941,6 +1962,23 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The index [u_k, u_k+1) with u being the knot of <code>net</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad43f76a5a27d1a1e7a6c155a1814de3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> ts_deboornet_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a new net whose data points to NULL.</p>
+<dl class="section return"><dt>Returns</dt><dd>A new net whose data points to NULL. </dd></dl>
 
 </div>
 </div>
@@ -2039,7 +2077,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Moves the ownership of the data of <code>from</code> to <code>_to_</code>. After calling this function, <code>from</code> points to NULL. Does nothing, if <code>from</code> == <code>_to_</code>.</p>
+<p>Moves the ownership of the data of <code>from</code> to <code>_to_</code>. After calling this function, the data of <code>from</code> points to NULL. Does not free the data of <code>_to_</code>. Does nothing, if <code>from</code> == <code>_to_</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">from</td><td>The net whose values are moved to <code>_to_</code>. </td></tr>
@@ -2344,7 +2382,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Tue Dec 11 2018 17:41:46 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 12 2018 09:58:58 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
