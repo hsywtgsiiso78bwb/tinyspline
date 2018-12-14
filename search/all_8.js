@@ -13,7 +13,6 @@ var searchData=
   ['ts_5fbspline_5fdomain_5fmax',['ts_bspline_domain_max',['../tinyspline_8h.html#a6a664fb825edaa4c79767c96368d49e5',1,'tinyspline.c']]],
   ['ts_5fbspline_5fdomain_5fmin',['ts_bspline_domain_min',['../tinyspline_8h.html#a3916ff87c8f377d14484f7f1671fcec0',1,'tinyspline.c']]],
   ['ts_5fbspline_5feval',['ts_bspline_eval',['../tinyspline_8h.html#a76b9dd8396fd83bf0aef88ac36b606f5',1,'tinyspline.c']]],
-  ['ts_5fbspline_5ffill_5fknots',['ts_bspline_fill_knots',['../tinyspline_8h.html#a6199d07c43a843c4283d6c631ece80d7',1,'tinyspline.c']]],
   ['ts_5fbspline_5ffree',['ts_bspline_free',['../tinyspline_8h.html#a1ae22ecf7c8865fc2eddeecfaa78c237',1,'tinyspline.c']]],
   ['ts_5fbspline_5ffrom_5fjson',['ts_bspline_from_json',['../tinyspline_8h.html#a5c8c20a177bfc0afbda209f6ab51f92b',1,'tinyspline.c']]],
   ['ts_5fbspline_5finit',['ts_bspline_init',['../tinyspline_8h.html#ae8c964681bfa38c6f2cd923c9e288891',1,'tinyspline.c']]],
