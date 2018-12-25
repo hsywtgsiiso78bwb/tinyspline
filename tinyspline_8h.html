@@ -1529,11 +1529,11 @@ TS_LCTRLP_DIM_MISMATCH If len_control_points % <code>dim</code> != 0 </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the knots of <code>spline</code>. Creates a deep copy of <code>knots</code>.</p>
+<p>Sets the knots of <code>spline</code>. Creates a deep copy of <code>knots</code> and scales it's values to [TS_MIN_KNOT_VALUE, TS_MAX_KNOT_VALUE].</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline whose knots are set. </td></tr>
-    <tr><td class="paramname">knots</td><td>The values to deep copy. </td></tr>
+    <tr><td class="paramname">knots</td><td>The values to deep copy and scale. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2324,7 +2324,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Sat Dec 15 2018 13:48:49 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 25 2018 23:49:14 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
