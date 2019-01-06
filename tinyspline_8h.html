@@ -125,6 +125,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structts_status.html">tsStatus</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structts_b_spline.html">tsBSpline</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a></td></tr>
@@ -144,6 +146,41 @@ Macros</h2></td></tr>
 <tr class="memitem:a8927de8a8f91850aac58c7a39c1a0b36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8927de8a8f91850aac58c7a39c1a0b36"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_EPSILON</b>&#160;&#160;&#160;1e-4</td></tr>
 <tr class="separator:a8927de8a8f91850aac58c7a39c1a0b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada277dde74e270b22686d6d1873f1d2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_TRY</b>(label,  error,  status)</td></tr>
+<tr class="separator:ada277dde74e270b22686d6d1873f1d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f772e75c75b0f844a6f7901678b873"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_CALL</b>(label,  error,  call)</td></tr>
+<tr class="separator:a15f772e75c75b0f844a6f7901678b873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a623d6c6e71060432322e4b3095f7a454"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a623d6c6e71060432322e4b3095f7a454"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_CATCH</b>(error)&#160;&#160;&#160;} if ((error)) {</td></tr>
+<tr class="separator:a623d6c6e71060432322e4b3095f7a454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821ed175e2f72a5fa192e5353dca1b2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a821ed175e2f72a5fa192e5353dca1b2c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_FINALLY</b>&#160;&#160;&#160;} {</td></tr>
+<tr class="separator:a821ed175e2f72a5fa192e5353dca1b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c4a460d9e40f567bdbe0069a33cfe3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_END_TRY</b></td></tr>
+<tr class="separator:a62c4a460d9e40f567bdbe0069a33cfe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a509be2e4d47f6234b31b1aa2994a2730"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a509be2e4d47f6234b31b1aa2994a2730"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_END_TRY_RETURN</b>(error)&#160;&#160;&#160;TS_END_TRY return (error);</td></tr>
+<tr class="separator:a509be2e4d47f6234b31b1aa2994a2730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d2bd343660a9d83a5be9e0a106c086"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_CALL_ROE</b>(error,  call)</td></tr>
+<tr class="separator:a22d2bd343660a9d83a5be9e0a106c086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16bd7fb545f27c25c9bad3ef22c0865"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_RETURN_SUCCESS</b>(status)</td></tr>
+<tr class="separator:af16bd7fb545f27c25c9bad3ef22c0865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2513e5c4bd16e2e262bb93de9a56e9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_RETURN_0</b>(status,  error,  msg)</td></tr>
+<tr class="separator:ae2513e5c4bd16e2e262bb93de9a56e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53079f2ef1c58402624a5763019ece43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_RETURN_1</b>(status,  error,  msg,  arg1)</td></tr>
+<tr class="separator:a53079f2ef1c58402624a5763019ece43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5937f48e8bdc3569e461590a8be30f1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_RETURN_2</b>(status,  error,  msg,  arg1,  arg2)</td></tr>
+<tr class="separator:a5937f48e8bdc3569e461590a8be30f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5c25197ca51d9a185a1cdf069276ca8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_RETURN_3</b>(status,  error,  msg,  arg1,  arg2,  arg3)</td></tr>
+<tr class="separator:ae5c25197ca51d9a185a1cdf069276ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61dd9a78242d9b82d59ca711490a5c22"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_0</b>(label,  status,  error,  msg)</td></tr>
+<tr class="separator:a61dd9a78242d9b82d59ca711490a5c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47cf34e70eb78070486783ada3a38721"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_1</b>(label,  status,  error,  msg,  arg1)</td></tr>
+<tr class="separator:a47cf34e70eb78070486783ada3a38721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44d0adbc229819a264242a004aa5c55c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_2</b>(label,  status,  error,  msg,  arg1,  arg2)</td></tr>
+<tr class="separator:a44d0adbc229819a264242a004aa5c55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a496cea1379f73571d753af687d6dcbdb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_3</b>(label,  status,  error,  msg,  arg1,  arg2,  arg3)</td></tr>
+<tr class="separator:a496cea1379f73571d753af687d6dcbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -154,22 +191,22 @@ typedef double&#160;</td><td class="memItemRight" valign="bottom"><b>tsReal</b><
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a565ff3761d90530714283629d1850e9a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> { <br />
-&#160;&#160;<b>TS_SUCCESS</b> = 0, 
-<b>TS_MALLOC</b> = -1, 
-<b>TS_DIM_ZERO</b> = -2, 
-<b>TS_DEG_GE_NCTRLP</b> = -3, 
+&#160;&#160;<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa893ab7b7cceef47e34f3a26321391a32">TS_SUCCESS</a> = 0, 
+<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aace5995781c849deb41c7e4c3202188a3">TS_MALLOC</a> = -1, 
+<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aaa7fa1a6035da41ab850cc28c8392b52d">TS_DIM_ZERO</a> = -2, 
+<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa0594219fb827f65dd0fcae683a7d93a8">TS_DEG_GE_NCTRLP</a> = -3, 
 <br />
-&#160;&#160;<b>TS_U_UNDEFINED</b> = -4, 
-<b>TS_MULTIPLICITY</b> = -5, 
-<b>TS_KNOTS_DECR</b> = -6, 
-<b>TS_NUM_KNOTS</b> = -7, 
+&#160;&#160;<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aac61a4b4715b7cf4f5f0fe23181c862b6">TS_U_UNDEFINED</a> = -4, 
+<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa3ce91fde828f508e1eb5b5a20500884f">TS_MULTIPLICITY</a> = -5, 
+<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa8681f76a03fb6effe22ce83c8e195dca">TS_KNOTS_DECR</a> = -6, 
+<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aaae619fc4e6c5ea234e6fe964d9c90246">TS_NUM_KNOTS</a> = -7, 
 <br />
-&#160;&#160;<b>TS_UNDERIVABLE</b> = -8, 
-<b>TS_LCTRLP_DIM_MISMATCH</b> = -10, 
-<b>TS_IO_ERROR</b> = -11, 
-<b>TS_PARSE_ERROR</b> = -12, 
+&#160;&#160;<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa6230a3465f9704ba3b43106481ad6274">TS_UNDERIVABLE</a> = -8, 
+<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aab847ac51bf9a1ea2397708bfd8c263e7">TS_LCTRLP_DIM_MISMATCH</a> = -10, 
+<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa88cfba25410f1c6a51f276b8e920666a">TS_IO_ERROR</a> = -11, 
+<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aacda93d3f19672d945432b10c027fa377">TS_PARSE_ERROR</a> = -12, 
 <br />
-&#160;&#160;<b>TS_INDEX_ERROR</b> = -13
+&#160;&#160;<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aaded6cd30e818b4280046bbfa36d8cf65">TS_INDEX_ERROR</a> = -13
 <br />
  }</td></tr>
 <tr class="separator:a565ff3761d90530714283629d1850e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,38 +220,38 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:abaa2f455904401b6d848296e4954ace5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#abaa2f455904401b6d848296e4954ace5">ts_bspline_degree</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
 <tr class="separator:abaa2f455904401b6d848296e4954ace5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a980c07744f3b8dce1952f515b95ea468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a980c07744f3b8dce1952f515b95ea468">ts_bspline_set_degree</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t deg)</td></tr>
-<tr class="separator:a980c07744f3b8dce1952f515b95ea468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc66aa99ad49d78945bd5236d3777c62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#abc66aa99ad49d78945bd5236d3777c62">ts_bspline_set_degree</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t deg, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:abc66aa99ad49d78945bd5236d3777c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae94b75586c66cfadc612da2436bff00c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ae94b75586c66cfadc612da2436bff00c">ts_bspline_order</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
 <tr class="separator:ae94b75586c66cfadc612da2436bff00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48eb201b7c4f213aa7d0e5b881ae4611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a48eb201b7c4f213aa7d0e5b881ae4611">ts_bspline_set_order</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t order)</td></tr>
-<tr class="separator:a48eb201b7c4f213aa7d0e5b881ae4611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6953d53aaeabf3abd41d9c52ff2d35c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a6953d53aaeabf3abd41d9c52ff2d35c0">ts_bspline_set_order</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t order, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a6953d53aaeabf3abd41d9c52ff2d35c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a018385ed866e0a8b840ebc8dc9857829"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a018385ed866e0a8b840ebc8dc9857829">ts_bspline_dimension</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
 <tr class="separator:a018385ed866e0a8b840ebc8dc9857829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83791fb7f460386a91d323fd6b1ba3d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a83791fb7f460386a91d323fd6b1ba3d4">ts_bspline_set_dimension</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t dim)</td></tr>
-<tr class="separator:a83791fb7f460386a91d323fd6b1ba3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fc61ae0940a4218800678028546861c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a7fc61ae0940a4218800678028546861c">ts_bspline_set_dimension</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t dim, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a7fc61ae0940a4218800678028546861c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad911018c9a8e822a3e0ee1a87d2160cc"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ad911018c9a8e822a3e0ee1a87d2160cc">ts_bspline_len_control_points</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
 <tr class="separator:ad911018c9a8e822a3e0ee1a87d2160cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a734beb5a0db5b2587c29ea7613f45667"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a734beb5a0db5b2587c29ea7613f45667">ts_bspline_num_control_points</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
 <tr class="separator:a734beb5a0db5b2587c29ea7613f45667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02f1dcb04924323277ac7f16791ac3c2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a02f1dcb04924323277ac7f16791ac3c2">ts_bspline_sof_control_points</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
 <tr class="separator:a02f1dcb04924323277ac7f16791ac3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a733a0cde3a8ff0f939057f75ce5d3aae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a733a0cde3a8ff0f939057f75ce5d3aae">ts_bspline_control_points</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal **ctrlp)</td></tr>
-<tr class="separator:a733a0cde3a8ff0f939057f75ce5d3aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07729ae3f9953161cbcb614c5aabe5ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a07729ae3f9953161cbcb614c5aabe5ac">ts_bspline_control_point_at</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t index, tsReal **ctrlp)</td></tr>
-<tr class="separator:a07729ae3f9953161cbcb614c5aabe5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63485fd35fa4da126e01d39ee2ccd5d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a63485fd35fa4da126e01d39ee2ccd5d9">ts_bspline_set_control_points</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, const tsReal *ctrlp)</td></tr>
-<tr class="separator:a63485fd35fa4da126e01d39ee2ccd5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5eafb1327bc9f1306ded38e3da56a98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ac5eafb1327bc9f1306ded38e3da56a98">ts_bspline_set_control_point_at</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t index, const tsReal *ctrlp)</td></tr>
-<tr class="separator:ac5eafb1327bc9f1306ded38e3da56a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1136f653df1b0b09ff70fb1c7724d31a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a1136f653df1b0b09ff70fb1c7724d31a">ts_bspline_control_points</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal **ctrlp, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a1136f653df1b0b09ff70fb1c7724d31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c3b8ed888df26dee77b7faf193b9ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#af1c3b8ed888df26dee77b7faf193b9ee">ts_bspline_control_point_at</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t index, tsReal **ctrlp, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:af1c3b8ed888df26dee77b7faf193b9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a6b561b6630d272b277d032e5b052ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a4a6b561b6630d272b277d032e5b052ff">ts_bspline_set_control_points</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, const tsReal *ctrlp, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a4a6b561b6630d272b277d032e5b052ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a020f997c47e16c03163994b35c444c7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a020f997c47e16c03163994b35c444c7d">ts_bspline_set_control_point_at</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t index, const tsReal *ctrlp, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a020f997c47e16c03163994b35c444c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a951dfbdaecf6d57dee0664742271a846"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a951dfbdaecf6d57dee0664742271a846">ts_bspline_num_knots</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
 <tr class="separator:a951dfbdaecf6d57dee0664742271a846"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9ddf7f6167b1bdd5ea59b64f8b5c903"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ab9ddf7f6167b1bdd5ea59b64f8b5c903">ts_bspline_sof_knots</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
 <tr class="separator:ab9ddf7f6167b1bdd5ea59b64f8b5c903"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48508d75b81d64a632cb52143d468cc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a48508d75b81d64a632cb52143d468cc1">ts_bspline_knots</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal **knots)</td></tr>
-<tr class="separator:a48508d75b81d64a632cb52143d468cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab31beed180539eee9bec0913146ee44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aab31beed180539eee9bec0913146ee44">ts_bspline_set_knots</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, const tsReal *knots)</td></tr>
-<tr class="separator:aab31beed180539eee9bec0913146ee44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b62bc57d8cb0236e814a18368f2ffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#af6b62bc57d8cb0236e814a18368f2ffd">ts_bspline_knots</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal **knots, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:af6b62bc57d8cb0236e814a18368f2ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c2ec5772175d53ad506eb13a81ad18f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a5c2ec5772175d53ad506eb13a81ad18f">ts_bspline_set_knots</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, const tsReal *knots, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a5c2ec5772175d53ad506eb13a81ad18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac42d4bd8b55b31e303b7123c31794851"><td class="memItemLeft" align="right" valign="top">tsReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ac42d4bd8b55b31e303b7123c31794851">ts_deboornet_knot</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
 <tr class="separator:ac42d4bd8b55b31e303b7123c31794851"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeda9fdd8b56932457d6a210c3fb60aed"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aeda9fdd8b56932457d6a210c3fb60aed">ts_deboornet_index</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
@@ -231,75 +268,542 @@ Functions</h2></td></tr>
 <tr class="separator:a03a766db0443da506d81b225b463c44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdee94618c4acf743c2622e9ff8aebe9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#acdee94618c4acf743c2622e9ff8aebe9">ts_deboornet_sof_points</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
 <tr class="separator:acdee94618c4acf743c2622e9ff8aebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a363b1e62519558dcab3412a075320acf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a363b1e62519558dcab3412a075320acf">ts_deboornet_points</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net, tsReal **points)</td></tr>
-<tr class="separator:a363b1e62519558dcab3412a075320acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82268ac2e730a1e2db9267f5c552bb01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a82268ac2e730a1e2db9267f5c552bb01">ts_deboornet_points</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net, tsReal **points, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a82268ac2e730a1e2db9267f5c552bb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43ba76e66721ce5cf8c63c7e295c1f2a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a43ba76e66721ce5cf8c63c7e295c1f2a">ts_deboornet_len_result</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
 <tr class="separator:a43ba76e66721ce5cf8c63c7e295c1f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6c21161e73f28bfda199f4efc0c9d2f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aa6c21161e73f28bfda199f4efc0c9d2f">ts_deboornet_num_result</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
 <tr class="separator:aa6c21161e73f28bfda199f4efc0c9d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2bea39fc67549b06e27df5e86849511"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ab2bea39fc67549b06e27df5e86849511">ts_deboornet_sof_result</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net)</td></tr>
 <tr class="separator:ab2bea39fc67549b06e27df5e86849511"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cee7e95a93308e5452dbde41b737c04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a0cee7e95a93308e5452dbde41b737c04">ts_deboornet_result</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net, tsReal **result)</td></tr>
-<tr class="separator:a0cee7e95a93308e5452dbde41b737c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c0fb1f6b83df41692b1cf5b0be69038"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a5c0fb1f6b83df41692b1cf5b0be69038">ts_deboornet_result</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *net, tsReal **result, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a5c0fb1f6b83df41692b1cf5b0be69038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8c964681bfa38c6f2cd923c9e288891"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structts_b_spline.html">tsBSpline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ae8c964681bfa38c6f2cd923c9e288891">ts_bspline_init</a> ()</td></tr>
 <tr class="separator:ae8c964681bfa38c6f2cd923c9e288891"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fc3ccefc135630e07541d7bd6a2553f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a4fc3ccefc135630e07541d7bd6a2553f">ts_bspline_new</a> (size_t num_control_points, size_t dimension, size_t degree, <a class="el" href="tinyspline_8h.html#aab5b8110f44d56c12ee1bbf0c76a29a4">tsBSplineType</a> type, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_)</td></tr>
-<tr class="separator:a4fc3ccefc135630e07541d7bd6a2553f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c1d28e8f52a4f05e19a5ca2cfd404fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a4c1d28e8f52a4f05e19a5ca2cfd404fc">ts_bspline_copy</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *original, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_copy_)</td></tr>
-<tr class="separator:a4c1d28e8f52a4f05e19a5ca2cfd404fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac491565a9834b8e950035002be53d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aaac491565a9834b8e950035002be53d8">ts_bspline_new</a> (size_t num_control_points, size_t dimension, size_t degree, <a class="el" href="tinyspline_8h.html#aab5b8110f44d56c12ee1bbf0c76a29a4">tsBSplineType</a> type, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:aaac491565a9834b8e950035002be53d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a8b258bce1e11f9c4d070ff22179a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a62a8b258bce1e11f9c4d070ff22179a3">ts_bspline_copy</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *original, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_copy_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a62a8b258bce1e11f9c4d070ff22179a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add802363d781d08f56f41c1482a0bccd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#add802363d781d08f56f41c1482a0bccd">ts_bspline_move</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *from, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_to_)</td></tr>
 <tr class="separator:add802363d781d08f56f41c1482a0bccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ae22ecf7c8865fc2eddeecfaa78c237"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a1ae22ecf7c8865fc2eddeecfaa78c237">ts_bspline_free</a> (<a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_)</td></tr>
 <tr class="separator:a1ae22ecf7c8865fc2eddeecfaa78c237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad43f76a5a27d1a1e7a6c155a1814de3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ad43f76a5a27d1a1e7a6c155a1814de3a">ts_deboornet_init</a> ()</td></tr>
 <tr class="separator:ad43f76a5a27d1a1e7a6c155a1814de3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af92380de0c8654d714e524cbdcb24ac4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#af92380de0c8654d714e524cbdcb24ac4">ts_deboornet_copy</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *original, <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *_copy_)</td></tr>
-<tr class="separator:af92380de0c8654d714e524cbdcb24ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a15a5b0bf054c8596d1b822af2a3706"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a5a15a5b0bf054c8596d1b822af2a3706">ts_deboornet_copy</a> (const <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *original, <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *_copy_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a5a15a5b0bf054c8596d1b822af2a3706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a020c7a42e7e1baba7e696e8940e1f089"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a020c7a42e7e1baba7e696e8940e1f089">ts_deboornet_move</a> (<a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *from, <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *_to_)</td></tr>
 <tr class="separator:a020c7a42e7e1baba7e696e8940e1f089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61d82577a0a39c6bb9c437229583e223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a61d82577a0a39c6bb9c437229583e223">ts_deboornet_free</a> (<a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *_net_)</td></tr>
 <tr class="separator:a61d82577a0a39c6bb9c437229583e223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95bd68ed4b4effcb893e50a79ea1a9f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a95bd68ed4b4effcb893e50a79ea1a9f4">ts_bspline_interpolate_cubic</a> (const tsReal *points, size_t n, size_t dim, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_)</td></tr>
-<tr class="separator:a95bd68ed4b4effcb893e50a79ea1a9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76b9dd8396fd83bf0aef88ac36b606f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a76b9dd8396fd83bf0aef88ac36b606f5">ts_bspline_eval</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal u, <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *_deBoorNet_)</td></tr>
-<tr class="separator:a76b9dd8396fd83bf0aef88ac36b606f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd6bbb2ed86c67f2ae3824550cfce8f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#abd6bbb2ed86c67f2ae3824550cfce8f1">ts_bspline_interpolate_cubic</a> (const tsReal *points, size_t n, size_t dim, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:abd6bbb2ed86c67f2ae3824550cfce8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf92a68d08f8416bc53514f6f7e13f4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#abf92a68d08f8416bc53514f6f7e13f4e">ts_bspline_eval</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal u, <a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *_deBoorNet_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:abf92a68d08f8416bc53514f6f7e13f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3916ff87c8f377d14484f7f1671fcec0"><td class="memItemLeft" align="right" valign="top">tsReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a3916ff87c8f377d14484f7f1671fcec0">ts_bspline_domain_min</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
 <tr class="separator:a3916ff87c8f377d14484f7f1671fcec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a664fb825edaa4c79767c96368d49e5"><td class="memItemLeft" align="right" valign="top">tsReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a6a664fb825edaa4c79767c96368d49e5">ts_bspline_domain_max</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline)</td></tr>
 <tr class="separator:a6a664fb825edaa4c79767c96368d49e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad744c0b96644ac12ad983791e34f74ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ad744c0b96644ac12ad983791e34f74ed">ts_bspline_is_closed</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal epsilon, int *closed)</td></tr>
-<tr class="separator:ad744c0b96644ac12ad983791e34f74ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa79e2c38510f00734b885b13c7d7e6e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aa79e2c38510f00734b885b13c7d7e6e6">ts_bspline_derive</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t n, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_derivative_)</td></tr>
-<tr class="separator:aa79e2c38510f00734b885b13c7d7e6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c1c871b8fed7f04e630fd18691970f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a4c1c871b8fed7f04e630fd18691970f4">ts_bspline_insert_knot</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal u, size_t n, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_result_, size_t *_k_)</td></tr>
-<tr class="separator:a4c1c871b8fed7f04e630fd18691970f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a975fbf5f686b7d4e44a34eb06d9ffe15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a975fbf5f686b7d4e44a34eb06d9ffe15">ts_bspline_resize</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, int num_control_points, int back, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_resized_)</td></tr>
-<tr class="separator:a975fbf5f686b7d4e44a34eb06d9ffe15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7ef815b2cf46c808df814f8cb7b404b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ad7ef815b2cf46c808df814f8cb7b404b">ts_bspline_split</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal u, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_split_, size_t *_k_)</td></tr>
-<tr class="separator:ad7ef815b2cf46c808df814f8cb7b404b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81669bc634b4d870496f835ba530545f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a81669bc634b4d870496f835ba530545f">ts_bspline_buckle</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal b, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_buckled_)</td></tr>
-<tr class="separator:a81669bc634b4d870496f835ba530545f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6c51a67e74d453fc66ec940ab466967"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ad6c51a67e74d453fc66ec940ab466967">ts_bspline_to_beziers</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_beziers_)</td></tr>
-<tr class="separator:ad6c51a67e74d453fc66ec940ab466967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac66c6815cf6a996f22cecbd5c69dc977"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ac66c6815cf6a996f22cecbd5c69dc977">ts_bspline_to_json</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, char **_json_)</td></tr>
-<tr class="separator:ac66c6815cf6a996f22cecbd5c69dc977"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c8c20a177bfc0afbda209f6ab51f92b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a5c8c20a177bfc0afbda209f6ab51f92b">ts_bspline_from_json</a> (const char *json, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_)</td></tr>
-<tr class="separator:a5c8c20a177bfc0afbda209f6ab51f92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3509c0e1085738f158bac364bbe5b4fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a3509c0e1085738f158bac364bbe5b4fa">ts_bspline_save_json</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, const char *path)</td></tr>
-<tr class="separator:a3509c0e1085738f158bac364bbe5b4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0df50da2946f3d0f35e5eb29d4a982dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a0df50da2946f3d0f35e5eb29d4a982dd">ts_bspline_load_json</a> (const char *path, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_)</td></tr>
-<tr class="separator:a0df50da2946f3d0f35e5eb29d4a982dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06b316cd5862dc1fa23368dc3dfde3e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a06b316cd5862dc1fa23368dc3dfde3e6">ts_bspline_is_closed</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal epsilon, int *closed, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a06b316cd5862dc1fa23368dc3dfde3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7e074dea9a67e392048647f6193bbc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ae7e074dea9a67e392048647f6193bbc7">ts_bspline_derive</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, size_t n, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_derivative_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:ae7e074dea9a67e392048647f6193bbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad11bdf4b5178dfd6f7870cd6da2d449"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aad11bdf4b5178dfd6f7870cd6da2d449">ts_bspline_insert_knot</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal u, size_t n, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_result_, size_t *_k_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:aad11bdf4b5178dfd6f7870cd6da2d449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05eae690e5a0654bd9733c6670c24e31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a05eae690e5a0654bd9733c6670c24e31">ts_bspline_split</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal u, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_split_, size_t *_k_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a05eae690e5a0654bd9733c6670c24e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a02577f496bad0ce14b07ef09fa4c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ab6a02577f496bad0ce14b07ef09fa4c2">ts_bspline_buckle</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, tsReal b, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_buckled_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:ab6a02577f496bad0ce14b07ef09fa4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab8fe62c4bff3da96334511bc092fb88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aab8fe62c4bff3da96334511bc092fb88">ts_bspline_to_beziers</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_beziers_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:aab8fe62c4bff3da96334511bc092fb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d5a9a78dbe42dabc23549f8ee0e78db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a9d5a9a78dbe42dabc23549f8ee0e78db">ts_bspline_to_json</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, char **_json_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a9d5a9a78dbe42dabc23549f8ee0e78db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5110f0a8081bdb2efff9ba96183a0d22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a5110f0a8081bdb2efff9ba96183a0d22">ts_bspline_from_json</a> (const char *json, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a5110f0a8081bdb2efff9ba96183a0d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af674037a734c8e6a9f48e42570f20203"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#af674037a734c8e6a9f48e42570f20203">ts_bspline_save_json</a> (const <a class="el" href="structts_b_spline.html">tsBSpline</a> *spline, const char *path, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:af674037a734c8e6a9f48e42570f20203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41966f6b68f525e7a90d86bfe85320d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a41966f6b68f525e7a90d86bfe85320d7">ts_bspline_load_json</a> (const char *path, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
+<tr class="separator:a41966f6b68f525e7a90d86bfe85320d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9f0e1a305d27413b486a498ab1ca0e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aa9f0e1a305d27413b486a498ab1ca0e6">ts_fequals</a> (tsReal x, tsReal y)</td></tr>
 <tr class="separator:aa9f0e1a305d27413b486a498ab1ca0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7da30fbf5cc8b891f4f2cbfcee7966d3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a7da30fbf5cc8b891f4f2cbfcee7966d3">ts_enum_str</a> (<a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> err)</td></tr>
-<tr class="separator:a7da30fbf5cc8b891f4f2cbfcee7966d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa686ba3aafb41fa30251ec262cc503d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aa686ba3aafb41fa30251ec262cc503d1">ts_str_enum</a> (const char *str)</td></tr>
-<tr class="separator:aa686ba3aafb41fa30251ec262cc503d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a997ea4b1b2b78d2e0c4d93d84adbc9dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a997ea4b1b2b78d2e0c4d93d84adbc9dc">ts_arr_fill</a> (tsReal *arr, size_t num, tsReal val)</td></tr>
 <tr class="separator:a997ea4b1b2b78d2e0c4d93d84adbc9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae72388da6ae6bd7a748a78bec84818eb"><td class="memItemLeft" align="right" valign="top">tsReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ae72388da6ae6bd7a748a78bec84818eb">ts_ctrlp_dist2</a> (const tsReal *x, const tsReal *y, size_t dim)</td></tr>
 <tr class="separator:ae72388da6ae6bd7a748a78bec84818eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a15f772e75c75b0f844a6f7901678b873"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_CALL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">label, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">call&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(error) = (call);                    \</div><div class="line">        if ((error)) goto __ <span class="preprocessor">## label ## __;</span></div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a22d2bd343660a9d83a5be9e0a106c086"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_CALL_ROE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">call&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                  \</div><div class="line">    (error) = (call);          \</div><div class="line">    if ((error)) return error; \</div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a62c4a460d9e40f567bdbe0069a33cfe3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_END_TRY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">}          \</div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae2513e5c4bd16e2e262bb93de9a56e9b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_RETURN_0</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">status, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                \</div><div class="line">    if ((status) != NULL) {                  \</div><div class="line">        (status)-&gt;code = error;          \</div><div class="line">        sprintf((status)-&gt;message, msg); \</div><div class="line">    }                                        \</div><div class="line">    return error;                            \</div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a53079f2ef1c58402624a5763019ece43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_RETURN_1</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">status, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg1&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                      \</div><div class="line">    if ((status) != NULL) {                        \</div><div class="line">        (status)-&gt;code = error;                \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1); \</div><div class="line">    }                                              \</div><div class="line">    return error;                                  \</div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a5937f48e8bdc3569e461590a8be30f1e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_RETURN_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">status, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                            \</div><div class="line">    if ((status) != NULL) {                              \</div><div class="line">        (status)-&gt;code = error;                      \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1, arg2); \</div><div class="line">    }                                                    \</div><div class="line">    return error;                                        \</div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae5c25197ca51d9a185a1cdf069276ca8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_RETURN_3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">status, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg3&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                                  \</div><div class="line">    if ((status) != NULL) {                                    \</div><div class="line">        (status)-&gt;code = error;                            \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1, arg2, arg3); \</div><div class="line">    }                                                          \</div><div class="line">    return error;                                              \</div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="af16bd7fb545f27c25c9bad3ef22c0865"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_RETURN_SUCCESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">status</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                            \</div><div class="line">    if ((status) != NULL) {              \</div><div class="line">        (status)-&gt;code = <a class="code" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa893ab7b7cceef47e34f3a26321391a32">TS_SUCCESS</a>; \</div><div class="line">        (status)-&gt;message[0] = <span class="charliteral">&#39;\0&#39;</span>; \</div><div class="line">    }                                    \</div><div class="line">    return <a class="code" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa893ab7b7cceef47e34f3a26321391a32">TS_SUCCESS</a>;                   \</div><div class="line">}</div><div class="ttc" id="tinyspline_8h_html_a565ff3761d90530714283629d1850e9aa893ab7b7cceef47e34f3a26321391a32"><div class="ttname"><a href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa893ab7b7cceef47e34f3a26321391a32">TS_SUCCESS</a></div><div class="ttdef"><b>Definition:</b> tinyspline.h:57</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a61dd9a78242d9b82d59ca711490a5c22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_THROW_0</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">label, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">status, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                \</div><div class="line">    if ((status) != NULL) {                  \</div><div class="line">        (status)-&gt;code = error;          \</div><div class="line">        sprintf((status)-&gt;message, msg); \</div><div class="line">    }                                        \</div><div class="line">    goto __ ## label ## __;                  \</div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a47cf34e70eb78070486783ada3a38721"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_THROW_1</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">label, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">status, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg1&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                       \</div><div class="line">    if ((status) != NULL) {                         \</div><div class="line">        (status)-&gt;code = error;                 \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1);  \</div><div class="line">    }                                               \</div><div class="line">    goto __ ## label ## __;                         \</div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a44d0adbc229819a264242a004aa5c55c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_THROW_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">label, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">status, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                             \</div><div class="line">    if ((status) != NULL) {                               \</div><div class="line">        (status)-&gt;code = error;                       \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1, arg2);  \</div><div class="line">    }                                                     \</div><div class="line">    goto __ ## label ## __;                               \</div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a496cea1379f73571d753af687d6dcbdb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_THROW_3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">label, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">status, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg3&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                                   \</div><div class="line">    if ((status) != NULL) {                                     \</div><div class="line">        (status)-&gt;code = error;                             \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1, arg2, arg3);  \</div><div class="line">    }                                                           \</div><div class="line">    goto __ ## label ## __;                                     \</div><div class="line">}</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ada277dde74e270b22686d6d1873f1d2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TS_TRY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">label, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">status&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                            \</div><div class="line">    (error) = <a class="code" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa893ab7b7cceef47e34f3a26321391a32">TS_SUCCESS</a>;                \</div><div class="line">    if ((status) != NULL) {              \</div><div class="line">        (status)-&gt;code = <a class="code" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa893ab7b7cceef47e34f3a26321391a32">TS_SUCCESS</a>; \</div><div class="line">        (status)-&gt;message[0] = <span class="charliteral">&#39;\0&#39;</span>; \</div><div class="line">    }                                    \</div><div class="line">    __ ## label ## __:                   \</div><div class="line">    if (!(error)) {</div><div class="ttc" id="tinyspline_8h_html_a565ff3761d90530714283629d1850e9aa893ab7b7cceef47e34f3a26321391a32"><div class="ttname"><a href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9aa893ab7b7cceef47e34f3a26321391a32">TS_SUCCESS</a></div><div class="ttdef"><b>Definition:</b> tinyspline.h:57</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="aab5b8110f44d56c12ee1bbf0c76a29a4"></a>
 <div class="memitem">
@@ -322,11 +826,49 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Defines the error codes used by various functions to indicate different types of errors. The following code snippet shows how to handle errors: </p><pre class="fragment"> tsError err = ...                  // any function call here
- if (err) {                         // or use err != TS_SUCCESS
-     printf("we got an error!");
-     return err;                    // you may want to reuse error codes
- }</pre> 
+<p>Defines different error codes. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aa893ab7b7cceef47e34f3a26321391a32"></a>TS_SUCCESS&#160;</td><td class="fielddoc">
+<p>No error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aace5995781c849deb41c7e4c3202188a3"></a>TS_MALLOC&#160;</td><td class="fielddoc">
+<p>Unable to allocate memory. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aaa7fa1a6035da41ab850cc28c8392b52d"></a>TS_DIM_ZERO&#160;</td><td class="fielddoc">
+<p>The dimension of the control points are 0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aa0594219fb827f65dd0fcae683a7d93a8"></a>TS_DEG_GE_NCTRLP&#160;</td><td class="fielddoc">
+<p>degree &gt;= num_control_points. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aac61a4b4715b7cf4f5f0fe23181c862b6"></a>TS_U_UNDEFINED&#160;</td><td class="fielddoc">
+<p>Undefined knot value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aa3ce91fde828f508e1eb5b5a20500884f"></a>TS_MULTIPLICITY&#160;</td><td class="fielddoc">
+<p>s(u) &gt; order </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aa8681f76a03fb6effe22ce83c8e195dca"></a>TS_KNOTS_DECR&#160;</td><td class="fielddoc">
+<p>Decreasing knot vector. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aaae619fc4e6c5ea234e6fe964d9c90246"></a>TS_NUM_KNOTS&#160;</td><td class="fielddoc">
+<p>Unexpected number of knots. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aa6230a3465f9704ba3b43106481ad6274"></a>TS_UNDERIVABLE&#160;</td><td class="fielddoc">
+<p>Spline is not derivable. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aab847ac51bf9a1ea2397708bfd8c263e7"></a>TS_LCTRLP_DIM_MISMATCH&#160;</td><td class="fielddoc">
+<p>len_control_points % dim != 0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aa88cfba25410f1c6a51f276b8e920666a"></a>TS_IO_ERROR&#160;</td><td class="fielddoc">
+<p>Error while reading/writing a file. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aacda93d3f19672d945432b10c027fa377"></a>TS_PARSE_ERROR&#160;</td><td class="fielddoc">
+<p>Error while parsing a serialized entity. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a565ff3761d90530714283629d1850e9aaded6cd30e818b4280046bbfa36d8cf65"></a>TS_INDEX_ERROR&#160;</td><td class="fielddoc">
+<p>Index does not exist. </p>
+</td></tr>
+</table>
+
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -363,7 +905,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a81669bc634b4d870496f835ba530545f"></a>
+<a class="anchor" id="ab6a02577f496bad0ce14b07ef09fa4c2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -383,7 +925,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>_buckled_</em>&#160;</td>
+          <td class="paramname"><em>_buckled_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -403,16 +951,20 @@ Functions</h2></td></tr>
     <tr><td class="paramname">spline</td><td>The spline to buckle. </td></tr>
     <tr><td class="paramname">b</td><td>The buckle factor (usually 0.0 &lt;= <code>b</code> &lt;= 1.0). </td></tr>
     <tr><td class="paramname">_buckled_</td><td>The output parameter. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
 <dd>
 TS_MALLOC If allocating memory failed. </dd></dl>
+<p>&lt; The straightening factor.</p>
+<p>&lt; Pointer to the control points of <code><em>buckled</em></code>.</p>
+<p>&lt; Used in for loops. </p>
 
 </div>
 </div>
-<a class="anchor" id="a07729ae3f9953161cbcb614c5aabe5ac"></a>
+<a class="anchor" id="af1c3b8ed888df26dee77b7faf193b9ee"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -432,7 +984,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">tsReal **&#160;</td>
-          <td class="paramname"><em>ctrlp</em>&#160;</td>
+          <td class="paramname"><em>ctrlp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -447,6 +1005,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
     <tr><td class="paramname">spline</td><td>The spline whose control point is read. </td></tr>
     <tr><td class="paramname">index</td><td>The zero based index of the requested control point. </td></tr>
     <tr><td class="paramname">ctrlp</td><td>The output array. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -458,7 +1017,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a733a0cde3a8ff0f939057f75ce5d3aae"></a>
+<a class="anchor" id="a1136f653df1b0b09ff70fb1c7724d31a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -472,7 +1031,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">tsReal **&#160;</td>
-          <td class="paramname"><em>ctrlp</em>&#160;</td>
+          <td class="paramname"><em>ctrlp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -486,6 +1051,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline whose control points are read. </td></tr>
     <tr><td class="paramname">ctrlp</td><td>The output array. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -495,7 +1061,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a4c1d28e8f52a4f05e19a5ca2cfd404fc"></a>
+<a class="anchor" id="a62a8b258bce1e11f9c4d070ff22179a3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -509,7 +1075,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>_copy_</em>&#160;</td>
+          <td class="paramname"><em>_copy_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -523,6 +1095,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">original</td><td>The spline to deep copy. </td></tr>
     <tr><td class="paramname">_copy_</td><td>The output parameter. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -556,7 +1129,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="aa79e2c38510f00734b885b13c7d7e6e6"></a>
+<a class="anchor" id="ae7e074dea9a67e392048647f6193bbc7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -576,7 +1149,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>_derivative_</em>&#160;</td>
+          <td class="paramname"><em>_derivative_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -599,6 +1178,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline to derive. </td></tr>
     <tr><td class="paramname">_derivative_</td><td>The output parameter. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -607,6 +1187,11 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 TS_UNDERIVABLE If the multiplicity of an internal knot of <code>spline</code> is greater than the degree of <code>spline</code>. NOTE: This will be fixed in the future. </dd>
 <dd>
 TS_MALLOC If allocating memory failed. </dd></dl>
+<p>&lt; Stores intermediate results.</p>
+<p>&lt; Pointer to the control points of worker.</p>
+<p>&lt; Pointer to the knots of worker.</p>
+<p>&lt; Used in for loops.</p>
+<p>&lt; Used to swap worker and <em>derivative</em>. </p>
 
 </div>
 </div>
@@ -682,7 +1267,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a76b9dd8396fd83bf0aef88ac36b606f5"></a>
+<a class="anchor" id="abf92a68d08f8416bc53514f6f7e13f4e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -702,7 +1287,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
-          <td class="paramname"><em>_deBoorNet_</em>&#160;</td>
+          <td class="paramname"><em>_deBoorNet_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -717,6 +1308,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
     <tr><td class="paramname">spline</td><td>The spline to evaluate. </td></tr>
     <tr><td class="paramname">u</td><td>The knot value to evaluate. </td></tr>
     <tr><td class="paramname">_deBoorNet_</td><td>The output parameter. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -725,6 +1317,20 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 TS_U_UNDEFINED If <code>spline</code> is not defined at knot value <code>u</code>. </dd>
 <dd>
 TS_MALLOC If allocating memory failed. </dd></dl>
+<p>&lt; Pointer to the points of <code><em>deBoorNet</em></code>.</p>
+<p>&lt; Index of <code>u</code>.</p>
+<p>&lt; Multiplicity of <code>u</code>.</p>
+<p>&lt; The actual used u.</p>
+<p>&lt; Offset used to copy values.</p>
+<p>&lt; First affected control point, inclusive.</p>
+<p>&lt; Last affected control point, inclusive.</p>
+<p>&lt; Number of affected control points.</p>
+<p>&lt; Current left index.</p>
+<p>&lt; Current right index.</p>
+<p>&lt; Current to index.</p>
+<p>&lt; Used in for loop.</p>
+<p>&lt; Knot value at index i.</p>
+<p>&lt; Weighting factors of control points. </p>
 
 </div>
 </div>
@@ -751,7 +1357,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a5c8c20a177bfc0afbda209f6ab51f92b"></a>
+<a class="anchor" id="a5110f0a8081bdb2efff9ba96183a0d22"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -765,7 +1371,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>_spline_</em>&#160;</td>
+          <td class="paramname"><em>_spline_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -779,6 +1391,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">json</td><td>The JSON string to parse. </td></tr>
     <tr><td class="paramname">&lt;em&gt;spline&lt;/em&gt;</td><td>The output parameter. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -819,7 +1432,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a4c1c871b8fed7f04e630fd18691970f4"></a>
+<a class="anchor" id="aad11bdf4b5178dfd6f7870cd6da2d449"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -851,7 +1464,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t *&#160;</td>
-          <td class="paramname"><em>_k_</em>&#160;</td>
+          <td class="paramname"><em>_k_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -860,7 +1479,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Inserts the knot value <code>u</code> <code>n</code> times into <code>spline</code> and stores the result in <code>_result_</code>. Creates a deep copy of <code>spline</code>, if <code>spline</code> != <code>_result_</code>.</p>
+<p>Inserts the knot value <code>u</code> up to <code>n</code> times into <code>spline</code> and stores the result in <code>_result_</code>. Creates a deep copy of <code>spline</code>, if <code>spline</code> != <code>_result_</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline whose knot vector is extended. </td></tr>
@@ -868,6 +1487,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
     <tr><td class="paramname">n</td><td>How many times <code>u</code> should be inserted. </td></tr>
     <tr><td class="paramname">_result_</td><td>The output parameter. </td></tr>
     <tr><td class="paramname">_k_</td><td>Stores the last index of <code>u</code> in <code>_result_</code>. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -877,7 +1497,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a95bd68ed4b4effcb893e50a79ea1a9f4"></a>
+<a class="anchor" id="abd6bbb2ed86c67f2ae3824550cfce8f1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -903,7 +1523,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>_spline_</em>&#160;</td>
+          <td class="paramname"><em>_spline_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -924,6 +1550,7 @@ http://www.bakoma-tex.com/doc/generic/pst-bspline/pst-bspline-doc.pdf
     <tr><td class="paramname">n</td><td>The number of points in <code>points</code>. </td></tr>
     <tr><td class="paramname">dim</td><td>The dimension of each control point in <code>_spline_</code>. </td></tr>
     <tr><td class="paramname">_spline_</td><td>The output parameter storing the result of this function. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -937,7 +1564,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ad744c0b96644ac12ad983791e34f74ed"></a>
+<a class="anchor" id="a06b316cd5862dc1fa23368dc3dfde3e6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -957,7 +1584,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>closed</em>&#160;</td>
+          <td class="paramname"><em>closed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -972,6 +1605,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
     <tr><td class="paramname">spline</td><td>The spline to query. </td></tr>
     <tr><td class="paramname">epsilon</td><td>The maximum distance. </td></tr>
     <tr><td class="paramname">closed</td><td>The output parameter. Is set to 1 if the distance of the first and the last point (not necessarily the control points) of <code>spline</code> is less than or equal to <code>epsilon</code>. Is set to 0 otherwise. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -981,7 +1615,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a48508d75b81d64a632cb52143d468cc1"></a>
+<a class="anchor" id="af6b62bc57d8cb0236e814a18368f2ffd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -995,7 +1629,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">tsReal **&#160;</td>
-          <td class="paramname"><em>knots</em>&#160;</td>
+          <td class="paramname"><em>knots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1009,6 +1649,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline whose knots are read. </td></tr>
     <tr><td class="paramname">knots</td><td>The output array. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1042,7 +1683,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a0df50da2946f3d0f35e5eb29d4a982dd"></a>
+<a class="anchor" id="a41966f6b68f525e7a90d86bfe85320d7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1056,7 +1697,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>_spline_</em>&#160;</td>
+          <td class="paramname"><em>_spline_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1070,6 +1717,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">path</td><td>Path of the JSON file. </td></tr>
     <tr><td class="paramname">&lt;em&gt;spline&lt;/em&gt;</td><td>The output parameter. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1129,7 +1777,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a4fc3ccefc135630e07541d7bd6a2553f"></a>
+<a class="anchor" id="aaac491565a9834b8e950035002be53d8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1161,7 +1809,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>_spline_</em>&#160;</td>
+          <td class="paramname"><em>_spline_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1177,6 +1831,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
     <tr><td class="paramname">dimension</td><td>The dimension of each control point of <code>_spline_</code>. </td></tr>
     <tr><td class="paramname">degree</td><td>The degree of <code>_spline_</code>. </td></tr>
     <tr><td class="paramname">type</td><td>How to setup the knot vector of <code>_spline_</code>. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
     <tr><td class="paramname">_spline_</td><td>The output parameter. </td></tr>
   </table>
   </dd>
@@ -1265,51 +1920,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a975fbf5f686b7d4e44a34eb06d9ffe15"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_bspline_resize </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>spline</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>num_control_points</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>back</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>_resized_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Resizes <code>spline</code> by <code>num_control_points</code> and stores the result in <code>_resized_</code>. Creates a deep copy of <code>spline</code>, if <code>spline</code> != <code>_result_</code>. If <code>back</code> != 0 <code>spline</code> is resized at the end. If <code>back</code> == 0 <code>spline</code> is resized at front.</p>
-<dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
-<dd>
-TS_DEG_GE_NCTRLP If the degree of <code>_resized_</code> would be &gt;= the number of control points of <code>_resized_</code>. </dd>
-<dd>
-TS_MALLOC If allocating memory failed. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a3509c0e1085738f158bac364bbe5b4fa"></a>
+<a class="anchor" id="af674037a734c8e6a9f48e42570f20203"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1323,7 +1934,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em>&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1337,6 +1954,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline to save. </td></tr>
     <tr><td class="paramname">path</td><td>Path of the JSON file. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1348,7 +1966,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ac5eafb1327bc9f1306ded38e3da56a98"></a>
+<a class="anchor" id="a020f997c47e16c03163994b35c444c7d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1368,7 +1986,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const tsReal *&#160;</td>
-          <td class="paramname"><em>ctrlp</em>&#160;</td>
+          <td class="paramname"><em>ctrlp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1383,6 +2007,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
     <tr><td class="paramname">spline</td><td>The spline whose control point is set. </td></tr>
     <tr><td class="paramname">index</td><td>The zero based index of the control point to set. </td></tr>
     <tr><td class="paramname">ctrlp</td><td>The values to deep copy. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1392,7 +2017,7 @@ TS_INDEX_ERROR If there is no control point at <code>index</code>. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a63485fd35fa4da126e01d39ee2ccd5d9"></a>
+<a class="anchor" id="a4a6b561b6630d272b277d032e5b052ff"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1406,7 +2031,13 @@ TS_INDEX_ERROR If there is no control point at <code>index</code>. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const tsReal *&#160;</td>
-          <td class="paramname"><em>ctrlp</em>&#160;</td>
+          <td class="paramname"><em>ctrlp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1420,6 +2051,7 @@ TS_INDEX_ERROR If there is no control point at <code>index</code>. </dd></dl>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline whose control points are set. </td></tr>
     <tr><td class="paramname">ctrlp</td><td>The values to deep copy. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1427,7 +2059,7 @@ TS_INDEX_ERROR If there is no control point at <code>index</code>. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a980c07744f3b8dce1952f515b95ea468"></a>
+<a class="anchor" id="abc66aa99ad49d78945bd5236d3777c62"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1441,7 +2073,13 @@ TS_INDEX_ERROR If there is no control point at <code>index</code>. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>deg</em>&#160;</td>
+          <td class="paramname"><em>deg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1464,7 +2102,7 @@ TS_DEG_GE_NCTRLP If <code>degree</code> &gt;= ts_bspline_get_control_points(spli
 
 </div>
 </div>
-<a class="anchor" id="a83791fb7f460386a91d323fd6b1ba3d4"></a>
+<a class="anchor" id="a7fc61ae0940a4218800678028546861c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1478,7 +2116,13 @@ TS_DEG_GE_NCTRLP If <code>degree</code> &gt;= ts_bspline_get_control_points(spli
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>dim</em>&#160;</td>
+          <td class="paramname"><em>dim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1488,12 +2132,13 @@ TS_DEG_GE_NCTRLP If <code>degree</code> &gt;= ts_bspline_get_control_points(spli
       </table>
 </div><div class="memdoc">
 <p>Sets the dimension of <code>spline</code>. The following conditions must be satisfied: </p><pre class="fragment">(1) dim &gt;= 1
-(2) len_control_points % dim == 0
+(2) len_control_points(spline) % dim == 0
 </pre><p>with <em>len_control_points</em> being the length of the control point array of <code>spline</code>. The dimension of a spline describes the number of components for each point in ts_bspline_get_control_points(spline). One-dimensional splines are possible, albeit their benefit might be questionable.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline whose dimension is set. </td></tr>
     <tr><td class="paramname">dim</td><td>The dimension to be set. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1501,11 +2146,11 @@ TS_DEG_GE_NCTRLP If <code>degree</code> &gt;= ts_bspline_get_control_points(spli
 <dd>
 TS_DIM_ZERO If <code>dimension</code> == 0. </dd>
 <dd>
-TS_LCTRLP_DIM_MISMATCH If len_control_points % <code>dim</code> != 0 </dd></dl>
+TS_LCTRLP_DIM_MISMATCH If len_control_points(spline) % <code>dim</code> != 0 </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="aab31beed180539eee9bec0913146ee44"></a>
+<a class="anchor" id="a5c2ec5772175d53ad506eb13a81ad18f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1519,7 +2164,13 @@ TS_LCTRLP_DIM_MISMATCH If len_control_points % <code>dim</code> != 0 </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const tsReal *&#160;</td>
-          <td class="paramname"><em>knots</em>&#160;</td>
+          <td class="paramname"><em>knots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1533,6 +2184,7 @@ TS_LCTRLP_DIM_MISMATCH If len_control_points % <code>dim</code> != 0 </dd></dl>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline whose knots are set. </td></tr>
     <tr><td class="paramname">knots</td><td>The values to deep copy and scale. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1544,7 +2196,7 @@ TS_MULTIPLICITY If there is a knot with multiplicity &gt; order </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a48eb201b7c4f213aa7d0e5b881ae4611"></a>
+<a class="anchor" id="a6953d53aaeabf3abd41d9c52ff2d35c0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1558,7 +2210,13 @@ TS_MULTIPLICITY If there is a knot with multiplicity &gt; order </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>order</em>&#160;</td>
+          <td class="paramname"><em>order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1572,6 +2230,7 @@ TS_MULTIPLICITY If there is a knot with multiplicity &gt; order </dd></dl>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline whose order is set. </td></tr>
     <tr><td class="paramname">order</td><td>The order to be set. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1629,7 +2288,7 @@ TS_DEG_GE_NCTRLP If <code>order</code> &gt; ts_bspline_get_control_points(spline
 
 </div>
 </div>
-<a class="anchor" id="ad7ef815b2cf46c808df814f8cb7b404b"></a>
+<a class="anchor" id="a05eae690e5a0654bd9733c6670c24e31"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1655,7 +2314,13 @@ TS_DEG_GE_NCTRLP If <code>order</code> &gt; ts_bspline_get_control_points(spline
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t *&#160;</td>
-          <td class="paramname"><em>_k_</em>&#160;</td>
+          <td class="paramname"><em>_k_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1670,7 +2335,8 @@ TS_DEG_GE_NCTRLP If <code>order</code> &gt; ts_bspline_get_control_points(spline
     <tr><td class="paramname">spline</td><td>The spline to split. </td></tr>
     <tr><td class="paramname">u</td><td>The split point. </td></tr>
     <tr><td class="paramname">_split_</td><td>The output parameter. </td></tr>
-    <tr><td class="paramname">_k_</td><td>Stores the last index of <code>u</code> in <code>_split_</code>. </td></tr>
+    <tr><td class="paramname">_k_</td><td>Output parameter. Stores the last index of <code>u</code> in <code>_split_</code>. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1682,7 +2348,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ad6c51a67e74d453fc66ec940ab466967"></a>
+<a class="anchor" id="aab8fe62c4bff3da96334511bc092fb88"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1696,7 +2362,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structts_b_spline.html">tsBSpline</a> *&#160;</td>
-          <td class="paramname"><em>_beziers_</em>&#160;</td>
+          <td class="paramname"><em>_beziers_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1710,16 +2382,24 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline to subdivide. </td></tr>
     <tr><td class="paramname">_beziers_</td><td>The output parameter. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TS_SUCCESS On success. </dd>
 <dd>
 TS_MALLOC If allocating memory failed. </dd></dl>
+<p>&lt; Number of control points to add/remove.</p>
+<p>&lt; Index of the split knot value.</p>
+<p>&lt; Minimum of the knot values.</p>
+<p>&lt; Maximum of the knot values.</p>
+<p>&lt; Temporarily stores the result.</p>
+<p>&lt; Pointer to the knots of tmp.</p>
+<p>&lt; Number of knots in tmp. </p>
 
 </div>
 </div>
-<a class="anchor" id="ac66c6815cf6a996f22cecbd5c69dc977"></a>
+<a class="anchor" id="a9d5a9a78dbe42dabc23549f8ee0e78db"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1733,7 +2413,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>_json_</em>&#160;</td>
+          <td class="paramname"><em>_json_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1747,6 +2433,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">spline</td><td>The spline to serialize. </td></tr>
     <tr><td class="paramname">json</td><td>The output parameter. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1798,7 +2485,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="af92380de0c8654d714e524cbdcb24ac4"></a>
+<a class="anchor" id="a5a15a5b0bf054c8596d1b822af2a3706"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1812,7 +2499,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structts_de_boor_net.html">tsDeBoorNet</a> *&#160;</td>
-          <td class="paramname"><em>_copy_</em>&#160;</td>
+          <td class="paramname"><em>_copy_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1826,6 +2519,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">original</td><td>The net to deep copy. </td></tr>
     <tr><td class="paramname">_copy_</td><td>The output parameter. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2125,7 +2819,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a363b1e62519558dcab3412a075320acf"></a>
+<a class="anchor" id="a82268ac2e730a1e2db9267f5c552bb01"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -2139,7 +2833,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">tsReal **&#160;</td>
-          <td class="paramname"><em>points</em>&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2153,6 +2853,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">net</td><td>The net whose points is read. </td></tr>
     <tr><td class="paramname">points</td><td>The output array. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2162,7 +2863,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a0cee7e95a93308e5452dbde41b737c04"></a>
+<a class="anchor" id="a5c0fb1f6b83df41692b1cf5b0be69038"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -2176,7 +2877,13 @@ TS_MALLOC If allocating memory failed. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">tsReal **&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structts_status.html">tsStatus</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2190,6 +2897,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   <table class="params">
     <tr><td class="paramname">net</td><td>The net whose result is read. </td></tr>
     <tr><td class="paramname">result</td><td>The output array. </td></tr>
+    <tr><td class="paramname">status</td><td>Output parameter. Store the returned error code and a descriptive error message. May be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2247,23 +2955,6 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a7da30fbf5cc8b891f4f2cbfcee7966d3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* ts_enum_str </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td>
-          <td class="paramname"><em>err</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the error message associated to <code>err</code>. Returns "unknown error" if <code>err</code> is no associated (indicating a bug) or is TS_SUCCESS (which is not an actual error). </p>
-
-</div>
-</div>
 <a class="anchor" id="aa9f0e1a305d27413b486a498ab1ca0e6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2301,29 +2992,12 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="aa686ba3aafb41fa30251ec262cc503d1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a> ts_str_enum </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the error code associated to <code>str</code> or TS_SUCCESS if <code>str</code> is not associated. Keep in mind that by concept "unknown error" is not associated, though, TS_SUCCESS is returned. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Wed Dec 26 2018 10:50:16 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 6 2019 20:37:18 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
