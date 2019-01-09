@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Linux (Ubuntu 16.04): <a href="https://github.com/msteinbeck/tinyspline/tree/build_linux_64">https://github.com/msteinbeck/tinyspline/tree/build_linux_64</a></li>
 </ul>
 <h4>Compiling From Source</h4>
-<p>TinySpline uses the CMake build system to compile and package its interfaces. The C interface is implemented in ANSI C (C89) and, thus, should be compatible with almost every compiler. All other features of TinySpline are optional and will be disabled if CMake does not find the corresponding dependencies; however, CMake and an appropriate C/C++ compiler must be available, regardless of the interface you want to build. The following compiler suites are tested: GCC, Clang, and MSVC. In order to create the bindings, Swig (3.0.1 or above) must be available. Each binding may have further dependencies to generate the source code of the target language. The following table gives an overview:</p>
+<p>TinySpline uses the CMake build system to compile and package its interfaces. The following compiler suites are tested: GCC, Clang, and MSVC. In order to create the bindings, Swig (3.0.1 or later) must be available. Each binding may have further dependencies to generate the source code of the target language. The following table gives an overview:</p>
 <table class="doxtable">
 <tr>
 <th>Language </th><th>Dependencies to Generate Source </th><th>(Relative) Output Directory  </th></tr>
@@ -134,13 +134,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Now let's start building TinySpline. First of all, checkout the repository and cd into it:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;git clone git@github.com:msteinbeck/tinyspline.git tinyspline</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cd tinyspline</div></div><!-- fragment --><p>Afterwards, create a build directory and cd into it:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;mkdir build</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cd build</div></div><!-- fragment --><p>Finally, run CMake and build the project:</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake ..</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cmake --build .</div></div><!-- fragment --><p>You will find the resulting libraries and packages in <code>tinyspline/build/lib</code>.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake ..</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cmake --build .</div></div><!-- fragment --><p>If you want to build a specific binding, use <code>-DTINYSPLINE_ENABLE_LANGUAGE</code> (where <code>LANGUAGE</code> is interface you want to build) when setting up cmake. For example:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake -DTINYSPLINE_ENABLE_PYTHON=True ..</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;build --build .</div></div><!-- fragment --><p>To enable all interfaces, use <code>-DTINYSPLINE_ENABLE_ALL_INTERFACES</code>:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake -DTINYSPLINE_ENABLE_ALL_INTERFACES=True ..</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;build --build .</div></div><!-- fragment --><p>You will find the resulting libraries and packages in <code>tinyspline/build/lib</code>.</p>
 <h4>Python 2 vs. Python 3</h4>
 <p>While generating the Python binding, Swig needs to distinguish between Python 2 and Python 3. That is, Swig uses the command line parameter <code>-py</code> to generate Python 2 compatible code and <code>-py3</code> to generate Python 3 compatible code. Accordingly, Swig is configured depending on the Python version found by CMake during initialization. On systems with multiple versions of Python installed, CMake usually chooses the more recent one. If you want to use a specific version of Python instead, set the environment variable 'TINYSPLINE_PYTHON_VERSION' to '2' or '3'.</p>
 <p>The following example shows how to force CMake to use Python 2 rather than Python 3:</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;TINYSPLINE_PYTHON_VERSION=2 cmake ..</div></div><!-- fragment --><h4>Disabling Bindings</h4>
-<p>For one reason or another, you may have the required packages to build a binding, but you don't want to compile it. You can pass additional arguments to prevent particular bindings from being compiled and packaged:</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake -DTINYSPLINE_DISABLE_CSHARP=YES ..</div></div><!-- fragment --><h4>Install the C and C++ Libraries</h4>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;TINYSPLINE_PYTHON_VERSION=2 cmake ..</div></div><!-- fragment --><h4>Install the C and C++ Libraries</h4>
 <p>The following command installs TinySpline to your system:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake --build . --target install</div></div><!-- fragment --><p>However, there are several binding-related files that CMake does not install with this command, as some languages use custom tools to install files. Python, for instance, uses Distutils/Setuptools to install files to Python-specific directories that CMake is not aware of. Thus, TinySpline ships further, language-related distribution tools.</p>
 <h4>Install the Bindings</h4>
@@ -155,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Wed Jan 9 2019 12:03:36 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 9 2019 13:16:43 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
