@@ -169,14 +169,14 @@ Macros</h2></td></tr>
 <tr class="separator:a5937f48e8bdc3569e461590a8be30f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5c25197ca51d9a185a1cdf069276ca8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_RETURN_3</b>(status,  error,  msg,  arg1,  arg2,  arg3)</td></tr>
 <tr class="separator:ae5c25197ca51d9a185a1cdf069276ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61dd9a78242d9b82d59ca711490a5c22"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_0</b>(label,  status,  error,  msg)</td></tr>
-<tr class="separator:a61dd9a78242d9b82d59ca711490a5c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47cf34e70eb78070486783ada3a38721"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_1</b>(label,  status,  error,  msg,  arg1)</td></tr>
-<tr class="separator:a47cf34e70eb78070486783ada3a38721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44d0adbc229819a264242a004aa5c55c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_2</b>(label,  status,  error,  msg,  arg1,  arg2)</td></tr>
-<tr class="separator:a44d0adbc229819a264242a004aa5c55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a496cea1379f73571d753af687d6dcbdb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_3</b>(label,  status,  error,  msg,  arg1,  arg2,  arg3)</td></tr>
-<tr class="separator:a496cea1379f73571d753af687d6dcbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab614f589163875cc2d41cb34b0831a55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_0</b>(label,  error,  status,  val,  msg)</td></tr>
+<tr class="separator:ab614f589163875cc2d41cb34b0831a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ee728e580993d2882aad057d37687b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_1</b>(label,  error,  status,  val,  msg,  arg1)</td></tr>
+<tr class="separator:a17ee728e580993d2882aad057d37687b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455e63df5cdbe16ffcc50ee6050a486e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_2</b>(label,  error,  status,  val,  msg,  arg1,  arg2)</td></tr>
+<tr class="separator:a455e63df5cdbe16ffcc50ee6050a486e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7704a32435f002d93f5a0f5cebd0a09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>TS_THROW_3</b>(label,  error,  status,  val,  msg,  arg1,  arg2,  arg3)</td></tr>
+<tr class="separator:aa7704a32435f002d93f5a0f5cebd0a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -631,7 +631,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a61dd9a78242d9b82d59ca711490a5c22"></a>
+<a class="anchor" id="ab614f589163875cc2d41cb34b0831a55"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -645,13 +645,19 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname">status, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">error, </td>
+          <td class="paramname">val, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -666,10 +672,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                \</div><div class="line">    if ((status) != NULL) {                  \</div><div class="line">        (status)-&gt;code = error;          \</div><div class="line">        sprintf((status)-&gt;message, msg); \</div><div class="line">    }                                        \</div><div class="line">    goto __ ## label ## __;                  \</div><div class="line">}</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">{                                                  \</div><div class="line">    (error) = val;                             \</div><div class="line">    if ((status) != NULL) {                    \</div><div class="line">        (status)-&gt;code = val;              \</div><div class="line">        sprintf((status)-&gt;message, msg);   \</div><div class="line">    }                                          \</div><div class="line">    goto __ ## label ## __;                    \</div><div class="line">}</div></div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a47cf34e70eb78070486783ada3a38721"></a>
+<a class="anchor" id="a17ee728e580993d2882aad057d37687b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -683,13 +689,19 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname">status, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">error, </td>
+          <td class="paramname">val, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -710,10 +722,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                       \</div><div class="line">    if ((status) != NULL) {                         \</div><div class="line">        (status)-&gt;code = error;                 \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1);  \</div><div class="line">    }                                               \</div><div class="line">    goto __ ## label ## __;                         \</div><div class="line">}</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">{                                                        \</div><div class="line">    (error) = val;                                   \</div><div class="line">    if ((status) != NULL) {                          \</div><div class="line">        (status)-&gt;code = val;                    \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1);   \</div><div class="line">    }                                                \</div><div class="line">    goto __ ## label ## __;                          \</div><div class="line">}</div></div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a44d0adbc229819a264242a004aa5c55c"></a>
+<a class="anchor" id="a455e63df5cdbe16ffcc50ee6050a486e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -727,13 +739,19 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname">status, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">error, </td>
+          <td class="paramname">val, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -760,10 +778,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                             \</div><div class="line">    if ((status) != NULL) {                               \</div><div class="line">        (status)-&gt;code = error;                       \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1, arg2);  \</div><div class="line">    }                                                     \</div><div class="line">    goto __ ## label ## __;                               \</div><div class="line">}</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">{                                                              \</div><div class="line">    (error) = val;                                         \</div><div class="line">    if ((status) != NULL) {                                \</div><div class="line">        (status)-&gt;code = val;                          \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1, arg2);   \</div><div class="line">    }                                                      \</div><div class="line">    goto __ ## label ## __;                                \</div><div class="line">}</div></div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a496cea1379f73571d753af687d6dcbdb"></a>
+<a class="anchor" id="aa7704a32435f002d93f5a0f5cebd0a09"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -777,13 +795,19 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname">error, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname">status, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">error, </td>
+          <td class="paramname">val, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -816,7 +840,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                   \</div><div class="line">    if ((status) != NULL) {                                     \</div><div class="line">        (status)-&gt;code = error;                             \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1, arg2, arg3);  \</div><div class="line">    }                                                           \</div><div class="line">    goto __ ## label ## __;                                     \</div><div class="line">}</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">{                                                                    \</div><div class="line">    (error) = val;                                               \</div><div class="line">    if ((status) != NULL) {                                      \</div><div class="line">        (status)-&gt;code = val;                                \</div><div class="line">        sprintf((status)-&gt;message, msg, arg1, arg2, arg3);   \</div><div class="line">    }                                                            \</div><div class="line">    goto __ ## label ## __;                                      \</div><div class="line">}</div></div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ada277dde74e270b22686d6d1873f1d2c"></a>
@@ -3046,7 +3070,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Tue Jan 22 2019 18:00:07 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 23 2019 08:41:01 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
