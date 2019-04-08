@@ -54,5 +54,5 @@ var searchData=
   ['ts_5fdeboornet_5fsof_5fpoints',['ts_deboornet_sof_points',['../tinyspline_8h.html#acdee94618c4acf743c2622e9ff8aebe9',1,'tinyspline.c']]],
   ['ts_5fdeboornet_5fsof_5fresult',['ts_deboornet_sof_result',['../tinyspline_8h.html#ab2bea39fc67549b06e27df5e86849511',1,'tinyspline.c']]],
   ['ts_5fdistance',['ts_distance',['../tinyspline_8h.html#a829f618ded342c03614830d87734e619',1,'tinyspline.c']]],
-  ['ts_5ffequals',['ts_fequals',['../tinyspline_8h.html#aa9f0e1a305d27413b486a498ab1ca0e6',1,'tinyspline.c']]]
+  ['ts_5fknots_5fequal',['ts_knots_equal',['../tinyspline_8h.html#afb694b1a69db3f8377b456caeebe7814',1,'tinyspline.c']]]
 ];

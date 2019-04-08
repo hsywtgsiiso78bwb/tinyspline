@@ -318,8 +318,8 @@ Functions</h2></td></tr>
 <tr class="separator:af674037a734c8e6a9f48e42570f20203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41966f6b68f525e7a90d86bfe85320d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tinyspline_8h.html#a565ff3761d90530714283629d1850e9a">tsError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a41966f6b68f525e7a90d86bfe85320d7">ts_bspline_load_json</a> (const char *path, <a class="el" href="structts_b_spline.html">tsBSpline</a> *_spline_, <a class="el" href="structts_status.html">tsStatus</a> *status)</td></tr>
 <tr class="separator:a41966f6b68f525e7a90d86bfe85320d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9f0e1a305d27413b486a498ab1ca0e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#aa9f0e1a305d27413b486a498ab1ca0e6">ts_fequals</a> (tsReal x, tsReal y)</td></tr>
-<tr class="separator:aa9f0e1a305d27413b486a498ab1ca0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb694b1a69db3f8377b456caeebe7814"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#afb694b1a69db3f8377b456caeebe7814">ts_knots_equal</a> (tsReal x, tsReal y)</td></tr>
+<tr class="separator:afb694b1a69db3f8377b456caeebe7814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a997ea4b1b2b78d2e0c4d93d84adbc9dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a997ea4b1b2b78d2e0c4d93d84adbc9dc">ts_arr_fill</a> (tsReal *arr, size_t num, tsReal val)</td></tr>
 <tr class="separator:a997ea4b1b2b78d2e0c4d93d84adbc9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a829f618ded342c03614830d87734e619"><td class="memItemLeft" align="right" valign="top">tsReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a829f618ded342c03614830d87734e619">ts_distance</a> (const tsReal *x, const tsReal *y, size_t dim)</td></tr>
@@ -3019,12 +3019,12 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="aa9f0e1a305d27413b486a498ab1ca0e6"></a>
+<a class="anchor" id="afb694b1a69db3f8377b456caeebe7814"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ts_fequals </td>
+          <td class="memname">int ts_knots_equal </td>
           <td>(</td>
           <td class="paramtype">tsReal&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -3042,7 +3042,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Compares the values <code>x</code> and <code>y</code> using TS_EPSILON.</p>
+<p>Compares the knots <code>x</code> and <code>y</code> using the epsilon environment TS_KNOT_EPSILON.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The x value to compare. </td></tr>
@@ -3050,7 +3050,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>1 If <code>x</code> is equals to <code>y</code> according to TS_EPSILON. </dd>
+<dl class="section return"><dt>Returns</dt><dd>1 If <code>x</code> is equal to <code>y</code> with respect to the epsilon environment TS_KNOT_EPSILON. </dd>
 <dd>
 0 Otherwise. </dd></dl>
 
@@ -3061,7 +3061,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Mon Apr 8 2019 15:08:11 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 8 2019 15:19:14 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
