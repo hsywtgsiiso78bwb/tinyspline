@@ -322,8 +322,8 @@ Functions</h2></td></tr>
 <tr class="separator:aa9f0e1a305d27413b486a498ab1ca0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a997ea4b1b2b78d2e0c4d93d84adbc9dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a997ea4b1b2b78d2e0c4d93d84adbc9dc">ts_arr_fill</a> (tsReal *arr, size_t num, tsReal val)</td></tr>
 <tr class="separator:a997ea4b1b2b78d2e0c4d93d84adbc9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae72388da6ae6bd7a748a78bec84818eb"><td class="memItemLeft" align="right" valign="top">tsReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#ae72388da6ae6bd7a748a78bec84818eb">ts_ctrlp_dist2</a> (const tsReal *x, const tsReal *y, size_t dim)</td></tr>
-<tr class="separator:ae72388da6ae6bd7a748a78bec84818eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a829f618ded342c03614830d87734e619"><td class="memItemLeft" align="right" valign="top">tsReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tinyspline_8h.html#a829f618ded342c03614830d87734e619">ts_distance</a> (const tsReal *x, const tsReal *y, size_t dim)</td></tr>
+<tr class="separator:a829f618ded342c03614830d87734e619"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a15f772e75c75b0f844a6f7901678b873"></a>
@@ -2507,48 +2507,6 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ae72388da6ae6bd7a748a78bec84818eb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">tsReal ts_ctrlp_dist2 </td>
-          <td>(</td>
-          <td class="paramtype">const tsReal *&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const tsReal *&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>dim</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the euclidean distance of <code>x</code> and <code>y</code> consisting of <code>dim</code> components, respectively.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The x value. </td></tr>
-    <tr><td class="paramname">y</td><td>The y value. </td></tr>
-    <tr><td class="paramname">dim</td><td>The dimension of <code>x</code> and <code>y</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The euclidean distanc of <code>x</code> and <code>y</code>. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a7f0e4e28d74108185823eabd4dedfe90"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3019,6 +2977,48 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a829f618ded342c03614830d87734e619"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tsReal ts_distance </td>
+          <td>(</td>
+          <td class="paramtype">const tsReal *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const tsReal *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>dim</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the euclidean distance of the points <code>x</code> and <code>y</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x value. </td></tr>
+    <tr><td class="paramname">y</td><td>The y value. </td></tr>
+    <tr><td class="paramname">dim</td><td>The dimension of <code>x</code> and <code>y</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The euclidean distance of <code>x</code> and <code>y</code>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aa9f0e1a305d27413b486a498ab1ca0e6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3061,7 +3061,7 @@ TS_MALLOC If allocating memory failed. </dd></dl>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>This project is maintained by <a href="https://github.com/msteinbeck">Marcel Steinbeck</a>.<br />
 &copy; 2014-2017 - TinySpline is released under the terms of the MIT license.<br />
-Generated on Sun Mar 31 2019 15:52:53 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 8 2019 15:08:11 for TinySpline by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11<br />
 Library logo and Doxygen theme custom created by <a href="https://www.nightwave.co">Nightwave Studios</a>.
